@@ -6,7 +6,7 @@
 
 ## 🚀 Projeto
 
-Este projeto consiste no desenvolvimento de uma aplicação de microserviço para stream de vídeo em PHP, seguindo os princípios do desenvolvimento orientado a testes (TDD) e as boas práticas do SOLID, juntamente com a arquitetura do Domain-Driven Design (DDD).
+Este projeto consiste no desenvolvimento de uma aplicação de microserviço de vídeo em PHP, seguindo os princípios do desenvolvimento orientado a testes (TDD) e as boas práticas do SOLID, juntamente com a arquitetura do Domain-Driven Design (DDD).
 
 A aplicação será dividida em módulos independentes, permitindo maior flexibilidade e escalabilidade. A arquitetura do DDD garantirá a separação clara das responsabilidades de cada componente, resultando em um código mais organizado e de fácil manutenção. 
 
