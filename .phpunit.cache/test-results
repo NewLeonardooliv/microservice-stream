@@ -1,0 +1,1 @@
+{"version":1,"defects":{"CategoryTest::testActive":5,"CategoryTest::testActiveted":8,"CategoryTest::testDesactivate":8},"times":{"Tests\\Unit\\PrimeiroUnitTest::testCallMethodTest":0,"CategoryTest::testAttributes":0.002,"CategoryTest::testActive":0,"CategoryTest::testActiveted":0.003,"CategoryTest::testDesactivate":0}}

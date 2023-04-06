@@ -1,0 +1,24 @@
+{
+    "name": "leonardo/microservice-stream",
+    "description": "Microservice Video with PHP",
+    "authors": [
+        {
+            "name": "Leonardo Oliveira"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Core\\": "src/Core/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.0",
+        "mockery/mockery": "^1.5"
+    },
+    "scripts": {
+        "test": "./vendor/bin/phpunit"
+    },
+    "require": {
+        "ramsey/uuid": "^4.7"
+    }
+}
