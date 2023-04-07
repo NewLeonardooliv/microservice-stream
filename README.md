@@ -2,7 +2,7 @@
 
 # (EM DESENVOLVIMENTO!) 
 
-![image](https://i.imgur.com/gnoHhxW.png)
+![image](https://i.imgur.com/5UNg6JU.png)
 
 ## 🚀 Projeto
 
@@ -15,5 +15,4 @@ Além disso, o uso do TDD garantirá que a aplicação seja construída com test
 ## 🔧 Tecnologias
 
 - PHP
-- PhpUnit
-- Mockery
+- PhpUnit e Mockery
