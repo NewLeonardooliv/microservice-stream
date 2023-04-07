@@ -1,15 +1,15 @@
 <?php
 
-namespace Modules\Category\Dto;
+namespace Modules\Category\Dto\ListCategory;
 
-class CreateCategoryResponseDto
+class ListCategoryResponseDto
 {
     public function __construct(
         public string $id,
         public string $name,
         public string $description = '',
         public bool $isActive = true,
-        public string $created_at = '',
+        public string $createdAt = '',
     ) {
     }
 }

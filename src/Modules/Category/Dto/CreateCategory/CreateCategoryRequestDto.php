@@ -1,6 +1,6 @@
 <?php
 
-namespace Modules\Category\Dto;
+namespace Modules\Category\Dto\CreateCategory;
 
 class CreateCategoryRequestDto
 {

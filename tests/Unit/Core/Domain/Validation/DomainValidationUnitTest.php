@@ -6,6 +6,11 @@ use Core\Domain\Exception\EntityValidationException;
 use Core\Domain\Validation\DomainValidation;
 use PHPUnit\Framework\TestCase;
 
+/**
+ * @internal
+ *
+ * @coversNothing
+ */
 class DomainValidationUnitTest extends TestCase
 {
     public function testNotNull()
@@ -31,7 +36,7 @@ class DomainValidationUnitTest extends TestCase
     public function testStrMaxLength()
     {
         $this->expectException(EntityValidationException::class);
-        
+
         $value = 'Test length so big';
         DomainValidation::strMaxLength($value, 5, 'Custom message exception');
     }

@@ -7,6 +7,11 @@ use Modules\Category\Domain\Category;
 use PHPUnit\Framework\TestCase;
 use Ramsey\Uuid\Uuid;
 
+/**
+ * @internal
+ *
+ * @coversNothing
+ */
 class CategoryUnitTest extends TestCase
 {
     public function testAttributes()
@@ -28,7 +33,6 @@ class CategoryUnitTest extends TestCase
     public function testActiveted()
     {
         $uuid = (string) Uuid::uuid4()->toString();
-
 
         $category = new Category(
             id: $uuid,
