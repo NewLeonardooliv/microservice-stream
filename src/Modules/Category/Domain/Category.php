@@ -1,6 +1,6 @@
 <?php
 
-namespace Core\Domain\Entity;
+namespace Modules\Category\Domain;
 
 use Core\Domain\ValueObject\Uuid;
 use Core\Domain\Entity\Traits\MethodsMagicsTrait;
@@ -15,11 +15,11 @@ class Category
         protected Uuid|string $id = '',
         protected string $name = '',
         protected string $description = '',
-        protected bool $isActive,
+        protected bool $isActive = true,
         protected DateTime|string $createdAt = '',
     ) {
         $this->id = $this->id ? new Uuid($this->id) : Uuid::random();
-        $this->createdAt =  $this->createdAt ? new DateTime($this->createdAt) : new DateTime();
+        $this->createdAt = $this->createdAt ? new DateTime($this->createdAt) : new DateTime();
 
         $this->validate();
     }
@@ -42,12 +42,10 @@ class Category
         $this->validate();
     }
 
-    public function validate()
+    private function validate()
     {
-        DomainValidation::notNull($this->name, "Name can't be null or empity");
         DomainValidation::strMaxLength($this->name);
         DomainValidation::strMinLength($this->name);
-
         DomainValidation::strCanNullAndMaxLength($this->description);
     }
 }

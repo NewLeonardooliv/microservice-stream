@@ -1,7 +1,9 @@
 <?php
 
-use Core\Domain\Entity\Category;
+namespace Unit\Modules\Domain;
+
 use Core\Domain\Exception\EntityValidationException;
+use Modules\Category\Domain\Category;
 use PHPUnit\Framework\TestCase;
 use Ramsey\Uuid\Uuid;
 

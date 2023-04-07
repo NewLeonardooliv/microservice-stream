@@ -1,8 +1,8 @@
 <?php
 
-namespace Core\Domain\Repository;
+namespace Modules\Category\Repositores;
 
-use Core\Domain\Entity\Category;
+use Modules\Category\Domain\Category;
 
 interface CategoryRepositoryInterface
 {
@@ -10,10 +10,6 @@ interface CategoryRepositoryInterface
     public function update(Category $category): Category;
     public function delete(string $id): bool;
     public function toCategory(string $id): Category;
-}
-
-interface SearchCategoryRepositoryInterface
-{
     public function findById(Category $category);
     public function findAll(string $filter= '', string $order = 'DESC'): array;
     public function paginate(string $filter= '', string $order = 'DESC', int $page = 1, int $totalPage = 15): array;
