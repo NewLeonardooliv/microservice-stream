@@ -8,11 +8,8 @@ use Modules\Category\Dto\{CreateCategoryRequestDto, CreateCategoryResponseDto};
 
 class CreateCategoryUseCase
 {
-    protected $categoryRepository;
-
-    public function __construct(CategoryRepositoryInterface $repository)
+    public function __construct(private CategoryRepositoryInterface $categoryRepository)
     {
-        $this->categoryRepository = $repository;
     }
 
     public function execute(CreateCategoryRequestDto $request): CreateCategoryResponseDto

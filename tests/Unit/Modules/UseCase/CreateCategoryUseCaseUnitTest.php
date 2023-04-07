@@ -8,8 +8,7 @@ use PHPUnit\Framework\TestCase;
 use Ramsey\Uuid\Uuid;
 use Modules\Category\Domain\Category;
 use Mockery;
-use Modules\Category\Dto\CreateCategoryRequestDto;
-use Modules\Category\Dto\CreateCategoryResponseDto;
+use Modules\Category\Dto\{CreateCategoryRequestDto, CreateCategoryResponseDto};
 
 class CreateCategoryUseCaseUnitTest extends TestCase
 {
@@ -39,6 +38,13 @@ class CreateCategoryUseCaseUnitTest extends TestCase
         $this->assertEquals($categoryName, $responseUseCase->name);
         $this->assertEquals('', $responseUseCase->description);
 
-        Mockery::close();
+        // Spy
+        $spyRepository = Mockery::spy(stdClass::class, CategoryRepositoryInterface::class);
+        $spyRepository->shouldReceive('insert')->andReturn($mockEntity);
+        $useCase = new CreateCategoryUseCase($spyRepository);
+        $responseUseCase = $useCase->execute($mockRequestDto);
+        $spyRepository->shouldHaveReceived('insert');
+
+        // Mockery::close();
     }
 }
