@@ -14,7 +14,7 @@ class ListCategoryUseCase
 
     public function execute(ListCategoryRequestDto $request): ListCategoryResponseDto
     {
-        $category = $this->categoryRepository->findById($request->id);
+        $category = $this->categoryRepository->findById(id: $request->id);
 
         return new ListCategoryResponseDto(
             id: $category->id(),

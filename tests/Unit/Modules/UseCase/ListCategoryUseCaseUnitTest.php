@@ -1,5 +1,7 @@
 <?php
 
+namespace Tests\Unit\Modules\UseCase;
+
 use Modules\Category\Domain\Category;
 use Modules\Category\Dto\ListCategory\ListCategoryRequestDto;
 use Modules\Category\Dto\ListCategory\ListCategoryResponseDto;
@@ -26,8 +28,8 @@ class ListCategoryUseCaseUnitTest extends TestCase
             $categoryName,
         ]);
 
-        $mockEntity->shouldReceive('id')->once()->andReturn($uuid);
-        $mockEntity->shouldReceive('createdAt')->once()->andReturn($createdAt->format('Y-m-d H:i:s'));
+        $mockEntity->shouldReceive('id')->andReturn($uuid);
+        $mockEntity->shouldReceive('createdAt')->andReturn($createdAt->format('Y-m-d H:i:s'));
 
         $mockRepository = \Mockery::mock(stdClass::class, CategoryRepositoryInterface::class);
         $mockRepository->shouldReceive('findById')
@@ -46,8 +48,8 @@ class ListCategoryUseCaseUnitTest extends TestCase
         $this->assertEquals($uuid, $responseUseCase->id);
 
         // Spies
-        $mockEntity->shouldReceive('id')->once()->andReturn($uuid);
-        $mockEntity->shouldReceive('createdAt')->once()->andReturn($createdAt->format('Y-m-d H:i:s'));
+        $mockEntity->shouldReceive('id')->andReturn($uuid);
+        $mockEntity->shouldReceive('createdAt')->andReturn($createdAt->format('Y-m-d H:i:s'));
 
         $spyRepository = \Mockery::spy(stdClass::class, CategoryRepositoryInterface::class);
         $spyRepository->shouldReceive('findById')->with($uuid)->andReturn($mockEntity);
