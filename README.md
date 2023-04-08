@@ -2,7 +2,7 @@
 
 # (EM DESENVOLVIMENTO!) 
 
-![image](https://i.imgur.com/5UNg6JU.png)
+![image](https://i.imgur.com/UD8DTvw.png)
 
 ## 🚀 Projeto
 
